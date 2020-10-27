@@ -56,8 +56,21 @@ for i in range(len(bat_voltage)):
 pcha = pd.DataFrame(data = -1*pcha, columns = ['Battery Charge Power (W)'], index = battery_voltage.index)
 pdis = pd.DataFrame(data = -1*pdis, columns = ['Battery Discharge Power (W)'], index = battery_voltage.index)
 
-#Plot power into inverter before June 14th
+#Plot instances of interruptions in service
+fig, ax = plt.subplots()
+#ax2 = ax.twinx()
+ax.plot(inverter_power['Power into Inverter (W)'][558000:570000])
+ax.set_xlabel('Date')
+ax.set_ylabel('Demand (W)')
+ax.set_xlim(18060.9, 18068.2)
+ax.set_ylim(0, 550)
+date_form = DateFormatter("%Y-%m-%d")
+ax.xaxis.set_major_locator(mdates.DayLocator(interval = 2))
+ax.xaxis.set_major_formatter(date_form)
 
+
+#Plot power into inverter before June 14th
+'''
 fig, ax = plt.subplots()
 #ax2 = ax.twinx()
 ax.plot(inverter_power['Power into Inverter (W)'][520000:525600])
@@ -65,13 +78,14 @@ ax.plot(inverter_power['Power into Inverter (W)'][520000:525600])
 ax.set_xlabel('Date')
 ax.set_ylabel('Demand (W)')
 #ax2.set_ylabel('Temperature (C)')
+ax.set_xlim(737197, 737199)
 ax.set_ylim(0, 550)
 date_form = DateFormatter("%Y-%m-%d")
 ax.xaxis.set_major_locator(mdates.DayLocator(interval = 1))
-ax.xaxis.set_major_formatter(date_form)
+ax.xaxis.set_major_formatter(date_form)'''
 
 #Plot power into inverter after June 14th
-
+'''
 fig, ax = plt.subplots()
 #ax2 = ax.twinx()
 ax.plot(inverter_power['Power into Inverter (W)'][603500:606600])
@@ -79,13 +93,14 @@ ax.plot(inverter_power['Power into Inverter (W)'][603500:606600])
 ax.set_xlabel('Date')
 ax.set_ylabel('Demand (W)')
 #ax2.set_ylabel('Temperature (C)')
+ax.set_xlim(737255, 737257)
 ax.set_ylim(0, 550)
 date_form = DateFormatter("%Y-%m-%d")
 ax.xaxis.set_major_locator(mdates.DayLocator(interval = 1))
-ax.xaxis.set_major_formatter(date_form)
+ax.xaxis.set_major_formatter(date_form)'''
 
 #Plot battery voltage, charging power, and discharging power before June 14th
-
+'''
 fig, ax = plt.subplots()
 ax2 = ax.twinx()
 ax.plot(pcha['Battery Charge Power (W)'][520000:525600], label = 'Charge Power')
@@ -94,15 +109,16 @@ ax2.plot(battery_voltage['Battery Voltage (V)'][520000:525600], color = 'orange'
 ax.set_xlabel('Date')
 ax.set_ylabel('Power (W)')
 ax2.set_ylabel('Voltage (V)')
+ax.set_xlim(737197, 737199)
 ax.set_ylim(0, 1300)
 ax2.set_ylim(21.5, 29.5)
 date_form = DateFormatter("%Y-%m-%d")
 ax.xaxis.set_major_locator(mdates.DayLocator(interval = 1))
 ax.xaxis.set_major_formatter(date_form)
-fig.legend()
+fig.legend()'''
 
 #Plot battery voltage, charging power, and discharging power after June 14th
-
+'''
 fig, ax = plt.subplots()
 ax2 = ax.twinx()
 ax.plot(pcha['Battery Charge Power (W)'][603500:606600], label = 'Charge Power')
@@ -111,15 +127,16 @@ ax2.plot(battery_voltage['Battery Voltage (V)'][603500:606600], color = 'orange'
 ax.set_xlabel('Date')
 ax.set_ylabel('Power (W)')
 ax2.set_ylabel('Voltage (V)')
+ax.set_xlim(737255, 737257)
 ax.set_ylim(0, 1300)
 ax2.set_ylim(21.5, 29.5)
 date_form = DateFormatter("%Y-%m-%d")
 ax.xaxis.set_major_locator(mdates.DayLocator(interval = 1))
 ax.xaxis.set_major_formatter(date_form)
-fig.legend()
+fig.legend()'''
 
 #Plot a histogram showing the ambient temperature data vs. the CDF
-
+'''
 fig, ax = plt.subplots()
 ax2 = ax.twinx()
 amb_temp = pd.DataFrame(data = ambient_temperature['Ambient Temperature (C)'].values[122400:648000], columns = ['Ambient Temperature (C)'])
@@ -129,7 +146,7 @@ ax2.hist(amb_temp['Ambient Temperature (C)'], bins = nbins, density = True, cumu
 ax.set_xlim((ax.get_xlim()[0], amb_temp['Ambient Temperature (C)'].max()))
 ax.set_xlabel('Ambient Temperature (C)')
 ax.set_ylabel('Counts')
-ax2.set_ylabel('Cumulative Probability')
+ax2.set_ylabel('Cumulative Probability')'''
 
 
 #Plot the battery discharge power data vs. the freezer temperature
