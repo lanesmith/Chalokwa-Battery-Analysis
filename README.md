@@ -10,11 +10,11 @@ other pertinant information can be gleaned. Results from this analysis were pres
 away was that the battery system is failing, likely due to a combination high ambient temperature and daily cycling. An increase
 in load was observed, but it does not appear to be the cause of the increase in interruptions in service. Rather, the increased
 loading appears to simply have hastened the process of notifying that the battery system was failing. The tools and data
-contained within this package will allow for similar data analysis. All data was acquired from [KWH's website](kw4h.org).
+contained within this package will allow for similar data analysis. All data was acquired from [KWH's website](http://kw4h.org/?orgId=2).
 
 ## Package Contents
 `/tools`: Contains the following modules:
-- `data_grab.py`: Reads .csv data downloaded from [KWH's website](kw4h.org) and saves it as a pickled DataFrame
+- `data_grab.py`: Reads .csv data downloaded from [KWH's website](http://kw4h.org/?orgId=2) and saves it as a pickled DataFrame
 - `data_view.py`: Reads the pickled DataFrames and generates various plots including the listed data sets
 
 `/data`: Contains pickled DataFrames of the following data:
