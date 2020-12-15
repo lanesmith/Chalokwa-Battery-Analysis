@@ -14,8 +14,8 @@ contained within this package will allow for similar data analysis. All data was
 
 ## Package Contents
 `/tools`: Contains the following modules:
-- `data_grab.py`: Reads .csv data downloaded from [KWH's website](http://kw4h.org/?orgId=2) and saves it as a pickled DataFrame
-- `data_view.py`: Reads the pickled DataFrames and generates various plots including the listed data sets
+- `data_grab.py`: Reads .csv data downloaded from [KWH's website](http://kw4h.org/?orgId=2) and saves them as pickled DataFrames.
+- `data_view.py`: Reads the pickled DataFrames and generates various plots, including the listed data sets.
 
 `/data`: Contains pickled DataFrames of the following data:
 - Battery Voltage
