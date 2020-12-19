@@ -22,12 +22,12 @@ Interruptions in an Energy Kiosk". *2020 IEEE Global Humanitarian Technology Con
 - `data_view.py`: Reads the pickled DataFrames and generates various plots, including the listed data sets.
 
 `/data`: Contains pickled DataFrames of the following data:
-- Battery Voltage
-- Battery Current
-- Power into the Inverter
-- PV Generation
-- Ambient Temperature
-- Freezer Temperature
+- Battery voltage
+- Battery current
+- Power into the inverter
+- Solar photovoltaic (PV) generation
+- Ambient temperature
+- Freezer temperature
 
 ## Software Requirements
 To use the included tools, the following software is required:
