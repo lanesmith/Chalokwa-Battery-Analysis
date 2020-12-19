@@ -12,6 +12,10 @@ in load was observed, but it does not appear to be the cause of the increase in 
 loading appears to simply have hastened the process of notifying that the battery system was failing. The tools and data
 contained within this package will allow for similar data analysis. All data was acquired from [KWH's website](http://kw4h.org/?orgId=2).
 
+## Associated Publication
+Lane D. Smith, Henry Louie, Steve Szablya, & Dave Goldsmith. "Remote Assessment of Battery Degradation-Related Service
+Interruptions in an Energy Kiosk". *2020 IEEE Global Humanitarian Technology Conference (GHTC)*, 2020.
+
 ## Package Contents
 `/tools`: Contains the following modules:
 - `data_grab.py`: Reads .csv data downloaded from [KWH's website](http://kw4h.org/?orgId=2) and saves them as pickled DataFrames.
